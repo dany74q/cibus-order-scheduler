@@ -1,0 +1,31 @@
+html, body {
+  width: 640px; /* your desired width */
+  height: 480px;
+  position: relative;
+  vertical-align:middle;
+}
+
+label {
+	text-align: right !important;
+}
+
+label.active {
+	margin-left: 30px !important;
+}
+
+label {
+	padding-right: 25px !important;
+}
+
+form {
+	direction: rtl !important;
+}
+
+.form-wrapper {
+	width: 75% !important;
+}
+
+#toast-container {
+	right: 5% !important;
+	left: initial !important;
+}
