@@ -1,0 +1,55 @@
+#ui-datepicker-div {
+	z-index: 1000 !important;
+}
+
+#schedule-checkout {
+	margin-bottom: 30px !important;
+	text-align: center;
+	margin-right: 0px !important;
+	width: 100% !important;
+}
+
+.schedule-submit {
+	float: initial !important;
+	margin-left: initial !important;
+	cursor: pointer;
+	text-align: center;
+}
+
+#schedule-modal h1 {
+	text-align: center;
+}
+
+#schedule-modal h4 {
+	margin-right: 100px;
+}
+
+#schedule-repeatedly {
+	display: none;
+}
+
+#schedule-datepicker {
+	margin-right: 30px;
+}
+
+.schedule-time {
+	margin-right: 42px;
+}
+
+.reschedule-day {
+	margin-right: 40px;
+}
+
+#schedule-repeatedly-checkbox {
+	margin-right: 20px;
+}
+
+.schedule-cart {
+	cursor: pointer !important;
+	background: rgb(0, 193, 23) !important;
+	margin-left: 60px !important;
+}
+
+#schedule-err {
+	text-align: center;
+}

@@ -26,6 +26,7 @@
     "webRequestBlocking",
     "*://localhost/*",
     "*://*.cibus.co.il/*",
-    "*://*.mysodexo.co.il/*"
+    "*://*.mysodexo.co.il/*",
+    "*://cibusscheduler.azurewebsites.net/*"
   ]
 }

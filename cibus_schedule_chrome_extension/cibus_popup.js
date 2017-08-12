@@ -17,7 +17,7 @@ var showRegisterLogin = function() {
 };
 
 var showUserSchedules = function() {
-	location.href = 'schedules.html';
+	location.href = '/schedules.html';
 };
 
 checkAuthentication();

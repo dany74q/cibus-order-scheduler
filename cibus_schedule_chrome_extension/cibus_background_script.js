@@ -2,16 +2,17 @@ chrome.webRequest.onBeforeRequest.addListener(
   function(details) {
     debugger;
     var itemId = '';
-	var message = undefined;
+    var message = undefined;
+
     if (details.method === "GET") {
     	var uri = new URI(details.url);
     	var queryObj = uri.query(true);
-		itemId = queryObj.typ;
+		  itemId = queryObj.typ;
 
     	if (queryObj.del !== undefined) {
 	    	message = {delete: true, itemId: itemId};
     	} else if (queryObj.clear !== undefined) {
-			message = {clear: true};
+        message = {clear: true};
     	} else {
     		message = {addItem: true, itemId: itemId, item: uri.query()};
     	}
@@ -33,7 +34,14 @@ chrome.webRequest.onBeforeRequest.addListener(
 );
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-	if (request.scheduleMessage !== undefined) {
-		$.post('http://localhost:1337/schedule', request);
+	if (request.scheduleMessage === true) {
+    delete request.scheduleMessage;
+		var posting = $.post('https://cibusscheduler.azurewebsites.net/api/AddCibusSchedule?code=CuDpdAfwNTzuOFJNULIiQZtg9TdKNha9xOiqbnBkr4QuEqclnOXRPQ==', JSON.stringify(request), function(res) {
+      debugger;
+    });
+  
+    posting.fail(function(err) {
+      debugger;
+    });
 	}
 });
